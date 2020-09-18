@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "git init && echo 在husky安装之前提前使用git init",
     "dev": "gitbook serve --port=8080 --watch --open",
     "build": "gitbook build . docs"
   },
