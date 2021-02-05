@@ -1,4 +1,8 @@
 
 module.exports = {
-  plugins: ["new-flowchart"]
+  root:"./src/",
+  plugins: [
+    "summary",
+    "new-flowchart"
+  ]
 };

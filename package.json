@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "git init && echo 在husky安装之前提前使用git init",
-    "dev": "gitbook serve --port=8080 --watch --open",
-    "build": "gitbook build . docs"
+    "dev": "gitbook serve --port=8080 --watch",
+    "build": "gitbook build ./src/ ./docs/",
+    "deploy": "npm run build && deploy-action"
   },
   "keywords": [
     "cyber",
@@ -16,8 +17,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gitbook-cli": "^2.3.2",
-    "gitbook-plugin-new-flowchart": "^0.1.1",
-    "husky": "^4.3.0"
+    "gitbook": "3.2.3",
+    "gitbook-cli": "2.3.2",
+    "gitbook-plugin-new-flowchart": "0.1.1",
+    "gitbook-plugin-summary": "1.1.0",
+    "gitbook-summary": "1.2.2",
+    "husky": "4.3.0"
   }
 }
